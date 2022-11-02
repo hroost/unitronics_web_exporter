@@ -1,0 +1,12 @@
+version: "2.1"
+
+services:
+
+  unitronics_exporter:
+    build: .
+    container_name: unitronics_exporter
+    ports:
+      - "9299:9299"
+    environment:
+      - TARGET_URL=http://91.211.7.107/002.html
+    restart: always
